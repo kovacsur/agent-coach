@@ -1,0 +1,32 @@
+---
+description: Project conventions for Agent Coach — file layout and writing discipline for contributors
+alwaysApply: true
+---
+
+# Agent Coach project conventions
+
+Agent Coach ships meta-skills for auditing agent-facing instruction prose. Judgement-heavy by design; see README.md for scope.
+
+## Where content lives
+
+- **Runtime artefacts:** `skills/<skill>/SKILL.md`, `skills/<skill>/references/*`. Deployed when a consumer copies a skill to `~/.cursor/skills/`.
+- **Author-only sidecar:** `skills/<skill>/MAINTENANCE.md`. Sync constraints; not loaded at runtime.
+- **Companion (Cursor):** `rules/<skill-name>.mdc`. Description-activated authoring discipline.
+- **Companion (Claude Code):** `skills/<skill-name>-rule/SKILL.md`. Same content; adapted frontmatter.
+
+## Writing discipline
+
+- Self-apply the `tighten-instructions` rubric on any agent-facing prose you edit.
+- Conservative default: protect dated incident notes, binary safety invariants, brief role framing, tone calibration, and per-level tool descriptions.
+- Repo-agnostic and portable in shipped skills.
+- Imperative, dense, concrete. No preambles.
+
+## Toolkit discipline
+
+- New skills only when a pattern recurs across enough independent files; otherwise add a rubric category to an existing skill.
+- No mechanisation (CLI/lint companions).
+- Never write into `~/.cursor/skills/` or other consumer locations from this workspace.
+
+## Naming
+
+- **Agent Coach** in prose; **`agent-coach`** for paths.

@@ -1,0 +1,8 @@
+{
+  "name": "agent-coach",
+  "description": "Meta-skills for auditing and tightening agent-facing instruction prose — Cursor rules, Claude skills, AGENTS.md, system prompts, tool descriptions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Endre János Kovács"
+  }
+}
