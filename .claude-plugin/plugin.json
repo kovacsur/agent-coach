@@ -1,8 +1,22 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "agent-coach",
-  "description": "Meta-skills for auditing and tightening agent-facing instruction prose — Cursor rules, Claude skills, AGENTS.md, system prompts, tool descriptions.",
+  "displayName": "Agent Coach",
+  "description": "Meta-skills for auditing and tightening agent-facing instruction prose — Cursor rules, Claude skills, AGENTS.md, system prompts, tool descriptions. Targets recurring dead-weight patterns from real instruction files: redundant rules, hedging, unactionable background, and oversized examples.",
   "version": "1.0.0",
   "author": {
-    "name": "Endre János Kovács"
-  }
+    "name": "Endre János Kovács",
+    "url": "https://github.com/kovacsur"
+  },
+  "homepage": "https://github.com/kovacsur/agent-coach",
+  "repository": "https://github.com/kovacsur/agent-coach",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "prompt-engineering",
+    "instructions",
+    "audit",
+    "context-engineering",
+    "agents"
+  ]
 }

@@ -1,6 +1,7 @@
 ---
 name: tighten-instructions-rule
 description: Authoring discipline for agent-facing instruction prose — Cursor rules, Cursor/Claude skills, AGENTS.md, system prompts, agent prompts, tool descriptions, inline prompt strings. Use when drafting or editing any of these, including non-canonical paths and ad-hoc prompts inside source code.
+license: MIT
 ---
 
 # Authoring agent-facing instructions

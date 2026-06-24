@@ -1,8 +1,9 @@
 ---
 name: tighten-instructions
 description: Audit and tighten agent-facing instructions (rules, skill files, agent prompts, AGENTS.md, tool descriptions) by identifying dead-weight prose while protecting load-bearing reinforcement. Use when reviewing or editing instruction files for context-budget efficiency.
+license: MIT
 argument-hint: [polish|tighten|compress]
-tools: Read
+allowed-tools: Read
 ---
 
 # tighten-instructions

@@ -4,6 +4,12 @@ Meta-skills for auditing and tightening agent-facing instruction prose — Curso
 
 Audits run on demand against existing files. The toolkit reports dead-weight prose and proposes deletions or rewrites; it does not edit files unilaterally.
 
+## Why It Exists
+
+Agent-facing instruction files age quickly: safety rules, workflow notes, examples, and tool guidance accrete until the agent spends more context on prose than behaviour. Agent Coach focuses on the recurring cases that show up in real Cursor rules, Claude skills, and agent prompts — redundant reinforcement, soft hedging, unactionable background, oversized examples, and author-side notes that belong outside runtime instructions.
+
+The rubric was shaped from 40+ de-duplicated sources across private research passes, including academic papers, vendor documentation, engineering write-ups, and practitioner notes in addition to extensive personal experience. Source details are available on request.
+
 ## What's included
 
 | Skill | Purpose |
@@ -42,11 +48,13 @@ Send as a standalone prompt (not mid-conversation). Requires the community marke
 cp -r skills/tighten-instructions skills/tighten-instructions-rule ~/.claude/skills/
 ```
 
-Claude Code has no separate rule-file primitive. The companion ships as `skills/tighten-instructions-rule/` — a model-invoked skill activated by description.
+Claude Code has no separate rule-file primitive. The companion ships as `skills/tighten-instructions-rule/` — a model-invoked skill activated by description. On the audit skill, `allowed-tools: Read` ([Agent Skills](https://agentskills.io/specification) standard, experimental) pre-approves Read in Claude Code; `argument-hint: [polish|tighten|compress]` adds slash-command level hints. The read-only audit contract is enforced in the skill body, not frontmatter.
 
 ### Other harnesses
 
-Skill files are standard Markdown with YAML frontmatter. Map `skills/<name>/SKILL.md` to your harness's skill location; use the `description` field as the activation trigger. Drop or replace harness-specific frontmatter (`tools`, `argument-hint`, `alwaysApply`) as needed.
+Shipped skills follow the [Agent Skills](https://agentskills.io/specification) open standard: a `skills/<name>/` directory with `SKILL.md` (`name`, `description`, optional `license` and `allowed-tools`) and on-demand files under `references/`. Map that layout to your harness's skill location; use `description` as the activation trigger.
+
+`argument-hint` on the audit skill is a Claude Code extension. The Cursor companion ships separately as `rules/tighten-instructions.mdc`. Adapt or drop harness-specific fields (`argument-hint`; `alwaysApply` on Cursor rules) as needed.
 
 ## Usage
 

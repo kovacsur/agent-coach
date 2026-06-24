@@ -14,6 +14,12 @@ Agent Coach ships meta-skills as portable Markdown with YAML frontmatter. Contri
 
 The skill folder and its companion are the deployment artefacts.
 
+## Skill format
+
+Runtime skills follow the [Agent Skills](https://agentskills.io/specification) open standard. Required frontmatter: `name` (must match the directory name), `description`. Optional: `license`, `allowed-tools`. Put on-demand rubrics in `references/`.
+
+Harness extensions used here: `argument-hint` on the audit skill (Claude Code). Do not use `tools:` in `SKILL.md` — that field is for Claude Code subagents (`agents/*.md`), not skills. See `skills/tighten-instructions/MAINTENANCE.md` for frontmatter and sync constraints.
+
 ## Writing discipline
 
 Any agent-facing prose you author or edit in this repo must pass the `tighten-instructions` rubric:

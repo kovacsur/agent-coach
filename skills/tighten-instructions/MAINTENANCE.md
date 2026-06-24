@@ -43,6 +43,17 @@ The companion rule is itself agent-facing prose. After a non-trivial edit to it,
 
 The selection-surface check (`SKILL.md` workflow step 6) relies on the WHAT/WHEN description-shape convention documented in Cursor's `create-skill` skill: a skill `description` should carry both capabilities (WHAT) and a `Use when …` trigger clause (WHEN). If `create-skill`'s convention changes, revisit step 6's wording and Pair 5 in `references/examples.md`.
 
+## SKILL.md frontmatter (Agent Skills + harness extensions)
+
+Runtime skills follow the [Agent Skills](https://agentskills.io/specification) open standard: `name` and `description` (required); optional `license`, `allowed-tools`; on-demand `references/` layout.
+
+Harness extensions on `skills/tighten-instructions/SKILL.md` only:
+
+- `allowed-tools: Read` — open-standard field (experimental). Pre-approves Read without a permission prompt in Claude Code; does not block other tools. The read-only audit contract is enforced in the skill body, not frontmatter.
+- `argument-hint: [polish|tighten|compress]` — Claude Code extension for slash-command autocomplete. Silently ignored elsewhere.
+
+Do not use `tools:` in `SKILL.md` — that field belongs to Claude Code **subagent** definitions (`agents/*.md`), not skills.
+
 ## Editing this file
 
 If a fourth aggressiveness level is added, factor `MAINTENANCE.md` along with the new level file rather than letting sync constraints accumulate ad hoc.
