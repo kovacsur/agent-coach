@@ -31,12 +31,10 @@ The companion ships as a `.mdc` rule file activated by description.
 **Plugin install (recommended):**
 
 ```sh
-/plugin install github:kovacsur/agent-coach
+/plugin install agent-coach@claude-community
 ```
 
-Send as a standalone prompt (not mid-conversation).
-
-**Desktop app:** Customize → + icon next to Personal plugins → Add from repository → paste the GitHub URL.
+Send as a standalone prompt (not mid-conversation). Requires the community marketplace — add it once with `/plugin marketplace add anthropics/claude-plugins-community` if you haven't already.
 
 **Manual install:**
 
