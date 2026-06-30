@@ -34,13 +34,22 @@ The companion ships as a `.mdc` rule file activated by description.
 
 ### Claude Code
 
-**Plugin install (recommended):**
+**Plugin install via self-hosted marketplace:**
+
+```sh
+/plugin marketplace add kovacsur/agent-coach
+/plugin install agent-coach@agent-coach
+```
+
+Send each as a standalone prompt (not mid-conversation).
+
+**Plugin install via community marketplace** *(pending approval)*:
 
 ```sh
 /plugin install agent-coach@claude-community
 ```
 
-Send as a standalone prompt (not mid-conversation). Requires the community marketplace — add it once with `/plugin marketplace add anthropics/claude-plugins-community` if you haven't already.
+Requires the community marketplace — add it once with `/plugin marketplace add anthropics/claude-plugins-community` if you haven't already.
 
 **Manual install:**
 
@@ -76,6 +85,7 @@ agent-coach/
 ├── AGENTS.md                          ← agent orientation for contributors
 ├── CONTRIBUTING.md
 ├── .claude-plugin/plugin.json         ← Claude Code plugin manifest
+├── .claude-plugin/marketplace.json    ← self-hosted marketplace catalog
 ├── .cursor/rules/agent-coach.mdc      ← maintainer conventions (project-scoped)
 ├── skills/                            ← runtime artefacts; what consumers deploy
 │   ├── tighten-instructions/

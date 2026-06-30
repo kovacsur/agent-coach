@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace-manifest.json",
+  "name": "agent-coach",
+  "owner": {
+    "name": "Endre János Kovács",
+    "url": "https://github.com/kovacsur"
+  },
+  "description": "Meta-skills for auditing and tightening agent-facing instruction prose — Cursor rules, Claude skills, AGENTS.md, system prompts, tool descriptions.",
+  "homepage": "https://github.com/kovacsur/agent-coach",
+  "repository": "https://github.com/kovacsur/agent-coach",
+  "plugins": [
+    {
+      "name": "agent-coach",
+      "source": "./",
+      "description": "Meta-skills for auditing and tightening agent-facing instruction prose — Cursor rules, Claude skills, AGENTS.md, system prompts, tool descriptions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Endre János Kovács"
+      },
+      "keywords": [
+        "skills",
+        "prompt-engineering",
+        "instructions",
+        "audit",
+        "context-engineering",
+        "agents"
+      ],
+      "category": "productivity"
+    }
+  ]
+}
