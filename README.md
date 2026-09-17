@@ -8,6 +8,8 @@ Audits run on demand against existing files. The toolkit reports dead-weight pro
 
 Agent-facing instruction files age quickly: safety rules, workflow notes, examples, and tool guidance accrete until the agent spends more context on prose than behaviour. Agent Coach focuses on the recurring cases that show up in real Cursor rules, Claude skills, and agent prompts — redundant reinforcement, soft hedging, unactionable background, oversized examples, and author-side notes that belong outside runtime instructions.
 
+Two categories run on a different axis — instruction correctness rather than context cost: examples that contradict the rule they illustrate, and success conditions that foreclose failure on a critical path, leaving off-spec improvisation as the agent's only route to the stated goal.
+
 The rubric was shaped from 40+ de-duplicated sources across private research passes, including academic papers, vendor documentation, engineering write-ups, and practitioner notes in addition to extensive personal experience. Source details are available on request.
 
 ## What's included

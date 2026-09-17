@@ -33,6 +33,7 @@ Never flag for deletion regardless of level:
 3. **Brief role/identity framing** — one or two opening sentences for an agent with no prior context to anchor on.
 4. **Tone/confidence calibration** — *"be conservative; verify before asserting"*. Looks woolly but shifts the generation distribution; not replaceable by a tool call.
 5. **Explicitly separated constraints section** — a standalone "Constraints:" / "Directives:" / equivalent block whose separation from surrounding task prose is itself load-bearing. Separating constraints from task description text improves compliance measurably; do not dissolve it into surrounding prose to save a header line.
+6. **Stated failure-exit on a critical path** — *"if you cannot do this without modifying the spec, stop and report rather than working around it"*. Reads like hedging but is not: hedging makes an *action* optional, an exit makes *failure* a permitted terminal outcome.
 
 Tool descriptions are handled per level; see the level file for the rule.
 

@@ -100,3 +100,19 @@ The capability list keeps the WHAT half; the `Use when …` clause with concrete
 
 - the description already surfaces the shape (the `When to use` bullets really are redundant in both directions); or
 - the shape governs which *internal verb* to use (e.g., *"prefer `count` over `rank` for boolean questions"*) rather than whether to load the skill at all.
+
+## Pair 6 — closed-world success condition on a critical path
+
+**Before** (~55 tokens):
+
+> Your task is to make the integration suite green. Do not stop until every test passes. Only fix the implementation — modifying or skipping a test is not an acceptable approach and will be treated as a failed run.
+
+**After** (~55 tokens):
+
+> Make the integration suite green by fixing the implementation. Do not modify or skip tests.
+>
+> If a test contradicts the documented behaviour, stop and report the contradiction. Stopping with an unresolved conflict is a valid outcome; reaching green by working around a test is not.
+
+**Cut + kept:** category 14 (closed-world success condition). The goal and the prohibition both survive at full force — only the foreclosure (*"do not stop until every test passes"*) is replaced by a named exit. Roughly token-neutral, which is the point: the fix is a rewrite of the success condition, not an appended safety paragraph.
+
+Note the exit **ranks** the two outcomes rather than merely permitting abandonment. *"Give up if the task seems impossible"* is the failure mode on the other side — it licenses stopping before the work is done. Ranking preserves effort while removing the trap.

@@ -21,6 +21,7 @@ Default-keep with an explicit deletion bar. Apply the 3-question test (in `SKILL
 11. **Walls of context fetchable on demand.** Inlined facts that a CLI / MCP / tool call can surface when actually needed.
 12. **Project specifics in core skill files.** Repo-specific naming, paths, conventions in a skill meant to be portable. Move to overlays or project rules.
 13. **Author-side provenance metadata.** Labels documenting where content came from / what level introduced it / what decision led to it, when the agent doesn't act on that information. Triggers: *"inherited from X"*, *"added at level Y"*, decision-log breadcrumbs in a directive file. Belongs in a maintenance sidecar (`MAINTENANCE.md`), the decisions log, or VCS history.
+14. **Closed-world success condition.** A directive defining success as one end state while foreclosing failure — *"do not stop until all tests pass"*, *"only approach X is acceptable"*, *"you will be failed for other approaches"*. On a critical path this leaves off-spec improvisation as the only remaining route to the stated goal. Rewrite to keep the goal and rank the outcomes, so that stopping-with-a-report outranks reaching the goal off-spec; a bare permission to abandon invites the opposite failure. Report as `tightenable` — the goal survives, the absolutism goes. Fires on the foreclosing language only; a path with no absolutist framing needs no exit added.
 
 ## Tool descriptions at this level
 
@@ -40,3 +41,4 @@ Fast first-pass triggers. Presence ≠ verdict.
 - **Time-relative anchorless phrasing:** *"recent"*, *"modern"*, *"latest"*, *"current"*, *"today's"*, *"in the past few"*. Replace with an absolute anchor or a tool call.
 - **Unanchored numeric precision:** *"exactly N words"*, *"in N lines"*, *"N bullet points"*, *"no more than N"*. Replace with qualitative phrasing or a range unless downstream tooling enforces the count.
 - **Modal-verb inflation:** most directives marked *"must"*, *"always"*, or *"never"*. Reserve unconditional language for binary safety/correctness invariants and true hard constraints.
+- **Closed-world success cues:** *"do not stop until"*, *"keep going until"*, *"must not fail"*, *"only X is acceptable"*, *"you will be failed if"*, *"at all costs"*, *"whatever it takes"*. On a critical path, check whether a failure-exit is stated anywhere in the file.
